@@ -24,14 +24,15 @@ namespace Assignment1._2._1TASK1
 
         public override void printAllContenet(List<VLibraryContent> contents)
         {
-            String itemStaus;
-            Console.WriteLine("DigitalMedia:");
-            foreach (VLibraryContent items in contents)
-            {
-                itemStaus = (items.IsBorrowed) ? "borrowed" : "available";
-                if (items is digitalMedia)
-                    Console.WriteLine("Item title: " + items.Title + "\t" + "Items AddTime: " + items.AddTime + "\t" + "Items STATUS: " + itemStaus);
-            }
+            
+                String itemStaus;
+                Console.WriteLine("DigitalMedia:");
+                foreach (VLibraryContent items in contents)
+                {
+                    itemStaus = (items.IsBorrowed) ? "borrowed" : "available";
+                    if (items is digitalMedia)
+                        Console.WriteLine("Item title: " + items.Title + "\t" + "Items AddTime: " + items.AddTime + "\t" + "Items sTATUS: " + itemStaus + "\t" + " item borrowedTime: " + items.BorrowedTime);
+                }
             
         }
     }
